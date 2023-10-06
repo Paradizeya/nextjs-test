@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 type Props = {};
 
-const page = async (props: Props) => {
+const Page = async (props: Props) => {
   const posts = await useGetPosts();
 
   return (
@@ -28,4 +28,4 @@ const page = async (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

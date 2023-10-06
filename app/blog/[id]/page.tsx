@@ -5,7 +5,7 @@ type Props = {
   params: { id: number };
 };
 
-export async function generateMetadata({
+export async function GenerateMetadata({
   params: { id },
 }: Props): Promise<Metadata> {
   const post = await useGetPost(id);
