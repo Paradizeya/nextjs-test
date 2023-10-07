@@ -19,7 +19,9 @@ const Blog = async (props: Props) => {
         {posts.map((post) => {
           return (
             <li key={post.id}>
-              <Link href={`/blog/${post.id}`}>{post.title}</Link>
+              <Link href={`/blog/${post.id}?userId=${post.userId}`}>
+                {post.title}
+              </Link>
             </li>
           );
         })}
