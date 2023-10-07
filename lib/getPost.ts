@@ -5,7 +5,7 @@ type Post = {
   body: string;
 };
 
-const useGetPost = async (id: number): Promise<Post> => {
+const getPost = async (id: number): Promise<Post> => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}`,
     {
@@ -17,4 +17,4 @@ const useGetPost = async (id: number): Promise<Post> => {
   return response.json();
 };
 
-export default useGetPost;
+export default getPost;

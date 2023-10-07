@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 type Props = {};
 
-const page = (props: Props) => {
+const Team = (props: Props) => {
   return <div>About page</div>;
 };
 
-export default page;
+export default Team;

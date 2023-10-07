@@ -5,7 +5,7 @@ type Post = {
   body: string;
 };
 
-const useGetPosts = async (): Promise<Array<Post>> => {
+const getPosts = async (): Promise<Array<Post>> => {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
     next: {
       revalidate: 60,
@@ -17,4 +17,4 @@ const useGetPosts = async (): Promise<Array<Post>> => {
   return response.json();
 };
 
-export default useGetPosts;
+export default getPosts;

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
-import useGetPosts from "@/hooks/useGetPosts";
+import getPosts from "@/lib/getPosts";
 
 export const metadata: Metadata = {
   title: "Blog | Create Next App",
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 type Props = {};
 
-const Page = async (props: Props) => {
-  const posts = await useGetPosts();
+const Blog = async (props: Props) => {
+  const posts = await getPosts();
 
   return (
     <>
@@ -28,4 +28,4 @@ const Page = async (props: Props) => {
   );
 };
 
-export default Page;
+export default Blog;

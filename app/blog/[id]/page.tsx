@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import useGetPost from "@/hooks/useGetPost";
+import getPost from "@/lib/getPost";
 
 type Props = {
   params: { id: number };
@@ -8,14 +8,14 @@ type Props = {
 export async function generateMetadata({
   params: { id },
 }: Props): Promise<Metadata> {
-  const post = await useGetPost(id);
+  const post = await getPost(id);
   return {
     title: post.title,
   };
 }
 
 const Post = async ({ params: { id } }: Props) => {
-  const post = await useGetPost(id);
+  const post = await getPost(id);
 
   return (
     <article>
