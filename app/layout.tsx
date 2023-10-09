@@ -9,6 +9,7 @@ const font = Jost({
   weight: ["200", "300", "400", "600"],
   subsets: ["latin"],
   style: ["normal"],
+  preload: true,
 });
 
 export const metadata: Metadata = {
