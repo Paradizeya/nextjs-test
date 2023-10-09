@@ -7,7 +7,7 @@ type Props = {
 
 const AboutLayout = ({ children }: Props) => {
   return (
-    <div>
+    <>
       <h1>About us</h1>
       <ul>
         <li>
@@ -17,8 +17,8 @@ const AboutLayout = ({ children }: Props) => {
           <Link href={"/about/contacts"}>Contacts</Link>
         </li>
       </ul>
-      {children}
-    </div>
+      <section>{children}</section>
+    </>
   );
 };
 

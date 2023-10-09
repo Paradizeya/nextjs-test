@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import getPost from "@/lib/getPost";
-import getUser from "@/lib/getUser";
+import getPost from "@/helpers/getPost";
+import getUser from "@/helpers/getUser";
 
 type Props = {
   params: { id: number };

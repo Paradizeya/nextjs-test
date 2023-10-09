@@ -1,7 +1,9 @@
+import styles from "./page.module.css";
+
 import { Metadata } from "next";
 import React from "react";
-import Link from "next/link";
-import getPosts from "@/lib/getPosts";
+import SearchForm from "@/components/SearchForm";
+import Posts from "@/components/Posts";
 
 export const metadata: Metadata = {
   title: "Blog | Create Next App",
@@ -10,23 +12,12 @@ export const metadata: Metadata = {
 type Props = {};
 
 const Blog = async (props: Props) => {
-  const posts = await getPosts();
-
   return (
-    <>
+    <section className={styles.wrapper}>
       <h1>Blog page</h1>
-      <ul>
-        {posts.map((post) => {
-          return (
-            <li key={post.id}>
-              <Link href={`/blog/${post.id}?userId=${post.userId}`}>
-                {post.title}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </>
+      <SearchForm />
+      <Posts />
+    </section>
   );
 };
 
